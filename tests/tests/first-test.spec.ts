@@ -45,6 +45,8 @@ test('update post', async ({ request }) => {
 
     console.log("hello");
 
+    console.log("hikarthick");
+
 });
 
 
