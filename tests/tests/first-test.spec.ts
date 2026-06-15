@@ -43,6 +43,8 @@ test('update post', async ({ request }) => {
 
     console.log("Post Updated");
 
+    console.log("hello");
+
 });
 
 
