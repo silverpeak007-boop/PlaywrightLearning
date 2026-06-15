@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Arial', sans-serif; font-size: 10.5px; color: #1a1a2e; background: #fff; }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 28px 40px 22px 40px;
+    position: relative;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e2b96f;
+    margin-bottom: 6px;
+  }
+  .header .tagline {
+    font-size: 10px;
+    color: #c8d6e5;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .header .contact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 9.5px;
+    color: #a8c6e8;
+  }
+  .header .contact span { display: flex; align-items: center; gap: 4px; }
+
+  /* ── BODY LAYOUT ── */
+  .body { display: flex; min-height: calc(100vh - 120px); }
+
+  /* ── LEFT SIDEBAR ── */
+  .sidebar {
+    width: 32%;
+    background: #f0f4f8;
+    padding: 22px 18px;
+    border-right: 3px solid #0f3460;
+  }
+  .sidebar .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #0f3460;
+    border-bottom: 2px solid #e2b96f;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+  }
+  .sidebar .section-title:first-child { margin-top: 0; }
+  .sidebar ul { list-style: none; padding: 0; }
+  .sidebar ul li {
+    font-size: 9.5px;
+    color: #2d3748;
+    padding: 3px 0;
+    border-bottom: 1px dotted #cbd5e0;
+    line-height: 1.4;
+  }
+  .sidebar ul li:last-child { border-bottom: none; }
+  .skill-tag {
+    display: inline-block;
+    background: #0f3460;
+    color: white;
+    font-size: 8.5px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin: 2px 2px 2px 0;
+  }
+  .skill-tag.gold {
+    background: #e2b96f;
+    color: #1a1a2e;
+    font-weight: 700;
+  }
+  .cert-item {
+    font-size: 8.5px;
+    color: #2d3748;
+    padding: 4px 0;
+    border-bottom: 1px dotted #cbd5e0;
+    line-height: 1.4;
+  }
+  .cert-item:last-child { border-bottom: none; }
+  .cert-org {
+    font-size: 8px;
+    color: #0f3460;
+    font-weight: 600;
+  }
+  .edu-item { margin-bottom: 10px; }
+  .edu-item .degree {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .edu-item .school {
+    font-size: 8.5px;
+    color: #0f3460;
+  }
+  .edu-item .year {
+    font-size: 8px;
+    color: #718096;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    width: 68%;
+    padding: 22px 28px;
+  }
+  .main .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #0f3460;
+    border-left: 4px solid #e2b96f;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    margin-top: 18px;
+  }
+  .main .section-title:first-child { margin-top: 0; }
+  .profile-text {
+    font-size: 9.5px;
+    color: #2d3748;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  /* Experience */
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .exp-company {
+    font-size: 11px;
+    font-weight: 800;
+    color: #0f3460;
+  }
+  .exp-role {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #e2b96f;
+    background: #1a1a2e;
+    padding: 1px 8px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  .exp-location {
+    font-size: 8.5px;
+    color: #718096;
+    text-align: right;
+  }
+  .exp-bullets { list-style: none; padding: 0; }
+  .exp-bullets li {
+    font-size: 9px;
+    color: #2d3748;
+    padding: 2.5px 0 2.5px 12px;
+    position: relative;
+    line-height: 1.5;
+    border-bottom: 1px dotted #e2e8f0;
+  }
+  .exp-bullets li:last-child { border-bottom: none; }
+  .exp-bullets li::before {
+    content: '▸';
+    color: #e2b96f;
+    position: absolute;
+    left: 0;
+    font-size: 9px;
+  }
+
+  /* Achievements */
+  .achievement-item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    align-items: flex-start;
+  }
+  .achievement-icon {
+    background: #e2b96f;
+    color: #1a1a2e;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    margin-top: 1px;
+  }
+  .achievement-text {
+    font-size: 9px;
+    color: #2d3748;
+    line-height: 1.5;
+  }
+
+  /* Competency table */
+  .comp-row {
+    display: flex;
+    gap: 0;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+  }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #0f3460;
+    min-width: 140px;
+    padding-right: 8px;
+  }
+  .comp-value {
+    font-size: 9px;
+    color: #2d3748;
+    line-height: 1.5;
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>R Karthick</h1>
+  <div class="tagline">
+    Senior Testing Professional &nbsp;|&nbsp; AI-Driven Quality Engineering Leader &nbsp;|&nbsp; Cloud & Process Transformation Specialist
+  </div>
+  <div class="contact">
+    <span>📍 Chennai, Tamil Nadu, India</span>
+    <span>📞 +91-9600065933</span>
+    <span>✉ silverpeak007@gmail.com</span>
+    <span>🔗 linkedin.com/in/r-karthick-152aa8206</span>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="section-title">Technical Skills</div>
+    <div>
+      <span class="skill-tag gold">Playwright</span>
+      <span class="skill-tag gold">TypeScript</span>
+      <span class="skill-tag">Test Automation</span>
+      <span class="skill-tag">Manual Testing</span>
+      <span class="skill-tag">Exploratory Testing</span>
+      <span class="skill-tag">Performance Testing</span>
+      <span class="skill-tag">System Testing</span>
+      <span class="skill-tag">Middleware Testing</span>
+      <span class="skill-tag">Functional Testing</span>
+      <span class="skill-tag">End-to-End Testing</span>
+      <span class="skill-tag">UAT</span>
+      <span class="skill-tag">Stability Testing</span>
+      <span class="skill-tag">Stress Testing</span>
+      <span class="skill-tag">Audio Testing</span>
+    </div>
+
+    <div class="section-title">Cloud & Tools</div>
+    <div>
+      <span class="skill-tag">AWS EC2</span>
+      <span class="skill-tag">AWS S3</span>
+      <span class="skill-tag">IAM</span>
+      <span class="skill-tag">VPC</span>
+      <span class="skill-tag">RDS</span>
+      <span class="skill-tag">CloudWatch</span>
+      <span class="skill-tag">CI/CD</span>
+      <span class="skill-tag">JIRA</span>
+      <span class="skill-tag">TestRail</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">Kiro AI</span>
+    </div>
+
+    <div class="section-title">Leadership</div>
+    <ul>
+      <li>Daily Scrum Leadership</li>
+      <li>Agile Delivery Management</li>
+      <li>Release Ownership</li>
+      <li>Team Mentorship (200+ team)</li>
+      <li>Stakeholder Coordination</li>
+      <li>Cross-functional Collaboration</li>
+    </ul>
+
+    <div class="section-title">Certifications</div>
+    <div class="cert-item">AWS Cloud Practitioner Essentials<br/><span class="cert-org">AWS Training & Certification</span></div>
+    <div class="cert-item">AWS Technical Essentials<br/><span class="cert-org">AWS Training & Certification</span></div>
+    <div class="cert-item">AWS Billing & Cost Management<br/><span class="cert-org">AWS Training & Certification</span></div>
+    <div class="cert-item">Fundamentals of ML & AI<br/><span class="cert-org">AWS Training & Certification</span></div>
+
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="degree">MBA – Systems Management</div>
+      <div class="school">University of Madras, Chennai</div>
+      <div class="year">2022 – 2023</div>
+    </div>
+    <div class="edu-item">
+      <div class="degree">B.Tech – Mechanical Engineering</div>
+      <div class="school">Vel Tech University, Chennai</div>
+      <div class="year">2014 – 2018</div>
+    </div>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <div class="section-title">Executive Profile</div>
+    <p class="profile-text">
+      Dynamic and highly accomplished Software Testing Professional with <strong>5+ years of expertise</strong> in AI-Driven Quality Engineering, enterprise-level testing operations, advanced workflow optimization, Linux environments, and AWS cloud technology fundamentals. Proven success in leading complex testing ecosystems, driving automation transformation, mentoring large teams, and implementing innovative AI-assisted solutions that significantly improved productivity, release quality, operational efficiency, and testing scalability.
+    </p>
+
+    <div class="section-title">Core Competencies</div>
+    <div class="comp-row">
+      <div class="comp-label">AI-Driven QE</div>
+      <div class="comp-value">Intelligent Test Optimization, Enterprise Validation, Release Governance, Risk-Based Testing, Quality Metrics Management</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-label">Test Automation ⭐</div>
+      <div class="comp-value"><strong>Playwright with TypeScript</strong> – End-to-End Browser Automation, Cross-Browser Testing (Chromium, Firefox, WebKit), Headed & Headless Execution, Playwright MCP Integration</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-label">Testing Expertise</div>
+      <div class="comp-value">Manual, Exploratory, System, Middleware, Stability, Performance, Sanity, Functional, E2E, Stress, Power, Multimodal, UAT, Web, AppFramework Testing</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-label">Test Architecture</div>
+      <div class="comp-value">Complex Test Case Creation, Enterprise Test Planning, Scalable Test Strategy Design, Validation Architecture, Enterprise Test Suite Management</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-label">Cloud & Infra</div>
+      <div class="comp-value">AWS EC2, S3, VPC, IAM, RDS, CloudWatch, AMI, Instance Types, Server Provisioning, Subnet Configuration, Gateway Concepts, CI/CD, IaaS, PaaS, SaaS</div>
+    </div>
+    <div class="comp-row">
+      <div class="comp-label">AI & Innovation</div>
+      <div class="comp-value">Kiro AI, AI Prompt Engineering, AI Dashboards, AI-Assisted Bug Triaging, Workflow Automation, Productivity Optimization</div>
+    </div>
+
+    <div class="section-title">Professional Experience</div>
+    <div class="exp-header">
+      <div>
+        <div class="exp-company">Amazon</div>
+        <div class="exp-role">Senior Testing Associate / Software Testing Professional</div>
+      </div>
+      <div class="exp-location">Chennai, Tamil Nadu<br/>2021 – 2026</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Played a critical leadership role in scaling a complex enterprise-level testing project from 3-member setup to an operational ecosystem of nearly <strong>200 professionals</strong>.</li>
+      <li>Led multiple high-impact testing initiatives involving AI-driven validation workflows, Manual Testing, Exploratory Testing, Middleware Validation, Performance Testing, Audio Testing, and System-Level Validation.</li>
+      <li>Designed, reviewed, optimized, and maintained <strong>1500+ advanced test cases</strong> across System, Stability, Graphics, Input Manager, Performance, Logging, Power, AppSwitch, and Audio Testing components.</li>
+      <li><strong>Playwright & TypeScript:</strong> Hands-on experience writing and executing automated test suites for end-to-end browser automation across Chromium, Firefox, and WebKit, including headed/headless execution modes and MCP integration.</li>
+      <li>Extensive hands-on experience working in Linux environments for 5+ years including command-line operations, environment validation, and troubleshooting.</li>
+      <li>Strong foundational knowledge in AWS cloud technologies including EC2, S3, VPC, IAM, RDS, CloudWatch, AMI, Server Provisioning, and CI/CD fundamentals.</li>
+      <li>Conducted daily Scrum and Agile coordination meetings driving execution alignment, issue resolution, and delivery efficiency.</li>
+      <li>Took complete ownership of daily testing deliverables — allocating tasks, tracking execution progress, and ensuring timely completion of critical milestones.</li>
+      <li>Successfully <strong>owned and signed off 80+ releases</strong> without delays while maintaining strong quality standards and stakeholder confidence.</li>
+      <li>Developed and implemented <strong>20+ AI-powered dashboards</strong>, automation utilities, and productivity-enhancing tools for workflow optimization.</li>
+    </ul>
+
+    <div class="section-title">Key Achievements</div>
+    <div class="achievement-item">
+      <span class="achievement-icon">🏆</span>
+      <span class="achievement-text">Received <strong>120+ Phone Tool Awards</strong> and multiple Star Performer recognitions for exceptional innovation, ownership, and delivery impact.</span>
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">⭐</span>
+      <span class="achievement-text"><strong>Star of the Month – Q1 2023</strong> at Amazon RNR Awards Ceremony for exemplary performance and high-impact quality contributions.</span>
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">⭐</span>
+      <span class="achievement-text"><strong>Star of the Month – Q2 2022</strong> at Amazon RNR Awards Ceremony for exemplary performance, ownership excellence, and outstanding delivery.</span>
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">🥇</span>
+      <span class="achievement-text"><strong>Winner – 2024 Amazon Ideate Competition</strong> among 400+ participants, proposing 32 innovative high-impact OPEX and process transformation ideas.</span>
+    </div>
+    <div class="achievement-item">
+      <span class="achievement-icon">🎖</span>
+      <span class="achievement-text">Received formal appreciation and winner certification directly from <strong>Project Director</strong> during Amazon 2024 Ideate Event for exceptional innovation contribution.</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
