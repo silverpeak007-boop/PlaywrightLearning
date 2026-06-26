@@ -44,8 +44,10 @@ test('POST API Test', async ({ request }) => {
 
     expect(data.name).toBe('Karthick');
 
-    expect(data.username).toBe('RK git branch');
+    expect(data.username).toBe('RK API');
 
     console.log('POST API Successful');
+
+    console.log("Pull Request Demo");
 
 });
