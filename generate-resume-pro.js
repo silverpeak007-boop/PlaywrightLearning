@@ -169,7 +169,7 @@ improved productivity, release quality, operational efficiency, and testing scal
   </tr>
   <tr>
     <td class="comp-label">Programming Languages &amp; Test Automation</td>
-    <td class="comp-value">TypeScript – Working knowledge in writing test scripts and automation workflows; Python – Foundational knowledge in scripting and utility development; Playwright with TypeScript – End-to-End Browser Automation, Cross-Browser Testing (Chromium, Firefox, WebKit), Headed &amp; Headless Execution, Test Script Development</td>
+    <td class="comp-value">TypeScript – Advanced proficiency in writing and maintaining test scripts, automation workflows, and end-to-end test frameworks; Python – Working knowledge in scripting and test automation; Playwright with TypeScript &amp; Python – Advanced hands-on expertise in End-to-End Browser Automation, Cross-Browser Testing (Chromium, Firefox, WebKit), Headed &amp; Headless Execution, Test Script Development; SQL – Proficient in writing queries, data validation, and database testing</td>
   </tr>
   <tr>
     <td class="comp-label">Test Design &amp; Architecture</td>
@@ -181,7 +181,7 @@ improved productivity, release quality, operational efficiency, and testing scal
   </tr>
   <tr>
     <td class="comp-label">Linux &amp; Technical Expertise</td>
-    <td class="comp-value">5+ Years Linux Environment Experience, Linux Commands, Shell-based Operations, JIRA, TestRail, Amazon QuickSuite, Dashboard Development</td>
+    <td class="comp-value">5+ Years Linux Environment Experience, Linux Commands, Shell-based Operations, JIRA, TestRail, Amazon QuickSuite, Dashboard Development, Git &amp; GitHub – Proficient in version control, branching, merging, commits, pull requests, and repository management</td>
   </tr>
   <tr>
     <td class="comp-label">AI &amp; Automation Innovation</td>
@@ -202,7 +202,7 @@ improved productivity, release quality, operational efficiency, and testing scal
   <li>Led multiple high-impact testing initiatives involving AI-driven validation workflows, Manual Testing, Exploratory Testing, Middleware Validation, Performance Testing, Audio Testing, and System-Level Validation.</li>
   <li>Possess extensive expertise in creating highly complex enterprise-grade test plans, scalable testing strategies, and advanced end-to-end validation scenarios for mission-critical environments.</li>
   <li>Successfully designed, reviewed, optimized, and maintained 1500+ advanced test cases across System Testing, Stability Testing, Graphics Testing, Input Manager Testing, Performance Testing, Logging Testing, Power Testing, AppSwitch Testing, Stability Long Run Testing, App Compact Testing, Audio Testing, and App Framework Testing components.</li>
-  <li>Hands-on experience with Playwright and TypeScript for end-to-end browser automation — writing, executing, and maintaining automated test suites across Chromium, Firefox, and WebKit in headed and headless execution modes.</li>
+  <li>Hands-on experience with Playwright using TypeScript and Python for end-to-end browser automation — writing, executing, and maintaining automated test suites across Chromium, Firefox, and WebKit in headed and headless execution modes.</li>
   <li>Extensive hands-on experience working in Linux environments for more than 5 years including command-line operations, environment validation, troubleshooting activities, and workflow execution support.</li>
   <li>Possess strong foundational knowledge in AWS cloud technologies including EC2, S3, VPC, IAM, RDS, CloudWatch, AMI, Instance Types, Server Provisioning, Subnet Configuration, Gateway Concepts, and CI/CD fundamentals.</li>
   <li>Conducted daily Scrum and Agile coordination meetings with team members to drive execution alignment, issue resolution, and delivery efficiency.</li>
