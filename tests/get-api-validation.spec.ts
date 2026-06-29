@@ -44,7 +44,7 @@ test('POST API Test', async ({ request }) => {
 
     expect(data.name).toBe('Karthick');
 
-    expect(data.username).toBe('Cherry pick demo');
+    expect(data.username).toBe('RK');
 
 
     console.log('POST API Successful');
